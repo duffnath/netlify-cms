@@ -13,10 +13,6 @@ steps:
   displayName: 'Install App'
   workingDirectory: 'website'
 
-- script: yarn global add gatsby-cli;
-  displayName: 'Install Gatsby'
-  workingDirectory: 'website'
-
 - script: yarn build
   displayName: 'Build'
   workingDirectory: 'website'

@@ -45,7 +45,7 @@ export const DocsTemplate = ({
   <Container size="md">
     <SidebarLayout sidebar={showSidebar && <DocsSidebar docsNav={docsNav} location={location} />}>
       <article data-docs-content>
-        {filename && <EditLink collection={`docs_${group}`} filename={filename} />}
+        {location.href?.indexOf("duffblogstore") !== -1 ? filename && <EditLink collection={`docs_${group}`} filename={filename} /> : null}
         <h1>{title}</h1>
         <Markdown body={body} html={html} />
         {showWidgets && <Widgets widgets={widgets} location={location} />}

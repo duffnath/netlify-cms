@@ -17,6 +17,10 @@ steps:
     path: $(YARN_CACHE_FOLDER)
   displayName: Cache Yarn packages
 
+- script: yarn install
+  displayName: 'Install App'
+  workingDirectory: 'website'
+
 - script: yarn build
   displayName: 'Build'
   workingDirectory: 'website'

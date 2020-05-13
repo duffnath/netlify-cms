@@ -26,13 +26,3 @@ steps:
     PathtoPublish: 'website/public'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-    
-
-- task: AzureFileCopy@4
-  inputs:
-    SourcePath: 'website/public'
-    azureSubscription: 'Duff Dev/Test(b8e2a708-4c47-4930-bc42-6d65c9efcb6c)'
-    Destination: 'AzureBlob'
-    storage: 'duffblogstore'
-    ContainerName: '`$web'
-

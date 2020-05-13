@@ -5,12 +5,12 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: npm i yarn -g
-    yarn install
-    yarn build
+- script: npm i yarn -g;
+    yarn install;
+    yarn build;
   displayName: 'Build'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'public'
+    PathtoPublish: '$(Build.SourcesDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'

@@ -5,12 +5,20 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: npm i yarn -g;
-    yarn install;
-    yarn build;
+- script: CD './website'
+    npm i yarn -g
+    yarn install
+    yarn build
   displayName: 'Build'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)'
+    PathtoPublish: '$(Build.SourcesDirectory)/website/public'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: '$(Build.SourcesDirectory)/website/public'
+    azureSubscription: 'Duff Dev/Test(b8e2a708-4c47-4930-bc42-6d65c9efcb6c)'
+    Destination: 'AzureBlob'
+    storage: 'duffblogstore'
+    ContainerName: '$web'

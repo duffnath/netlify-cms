@@ -5,13 +5,12 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: CD '$ENV:Agent_BuildDirectory'    
-    DIR
-    CD 'website'
+- script: DIR
     npm i yarn -g
     yarn install
     yarn build
   displayName: 'Build'
+  workingDirectory: 'website'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$ENV:System_DefaultWorkingDirectory\website\public'

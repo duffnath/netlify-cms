@@ -5,13 +5,13 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: npm i yarn -g;
-    npm i gatsby-cli -g;
+- script: npm i yarn -g;    
     yarn install
   displayName: 'Install'
   workingDirectory: 'website'
 
-- script: yarn build
+- script: npm i gatsby-cli -g;
+    yarn build
   displayName: 'Build'
   workingDirectory: 'website'
 

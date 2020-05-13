@@ -6,13 +6,13 @@ pool:
 
 steps:
 - script: npm i yarn -g;    
-    yarn install
+    yarn install ;
     Write-Host 'Install complete'
   displayName: 'Install'
   workingDirectory: 'website'
 
 - script: npm i gatsby-cli -g;
-    yarn build
+    yarn build ;
     Write-Host 'Build complete'
   displayName: 'Build'
   workingDirectory: 'website'

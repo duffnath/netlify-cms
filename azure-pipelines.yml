@@ -10,6 +10,7 @@ steps:
     yarn build
   displayName: 'Build'
   workingDirectory: 'website'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'website'
@@ -18,7 +19,7 @@ steps:
     
 - task: AzureFileCopy@4
   inputs:
-    SourcePath: 'website\public'
+    SourcePath: 'website/public'
     azureSubscription: 'Duff Dev/Test(b8e2a708-4c47-4930-bc42-6d65c9efcb6c)'
     Destination: 'AzureBlob'
     storage: 'duffblogstore'

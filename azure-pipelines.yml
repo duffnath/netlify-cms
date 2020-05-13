@@ -17,7 +17,7 @@ steps:
     path: $(YARN_CACHE_FOLDER)
   displayName: Cache Yarn packages
 
-- script: yarn install
+- script: yarn install --prefer-offline
   displayName: 'Install App'
   workingDirectory: 'website'
 
@@ -30,3 +30,4 @@ steps:
     PathtoPublish: 'website/public'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))

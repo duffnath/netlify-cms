@@ -6,12 +6,12 @@ pool:
 
 steps:
 - script: npm i yarn -g    
-    yarn
+    npm install -g gatsby-cli
+    yarn install
   displayName: 'Install'
   workingDirectory: 'website'
 
-- script: yarn global add gatsby
-    yarn build --verbose
+- script: yarn build
   displayName: 'Build'
   workingDirectory: 'website'
 

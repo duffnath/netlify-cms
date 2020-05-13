@@ -5,8 +5,8 @@ weight: 1
 ---
 # Hi Bri!!
 
-![](img/operations.png)
+![](../../img/operations.png)
 
-![](img/hugo.svg)
+![](../../img/hugo.svg)
 
-![](img/office.png)
+![](../../img/office.png)

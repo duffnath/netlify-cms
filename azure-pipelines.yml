@@ -5,8 +5,7 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: DIR
-    npm i yarn -g
+- script: npm i yarn -g
     yarn install
     yarn build
   displayName: 'Build'

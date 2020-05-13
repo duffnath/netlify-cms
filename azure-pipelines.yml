@@ -15,11 +15,20 @@ steps:
   displayName: 'Build'
   workingDirectory: 'website'
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'website'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+- script: dir
+    yarn build
+  displayName: 'Build'
+  workingDirectory: 'website'
+
+- script: (dir -Directory).FullName
+  displayName: 'Test'
+  workingDirectory: 'website'
+
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     PathtoPublish: 'website/dist'
+#     ArtifactName: 'drop'
+#     publishLocation: 'Container'
     
 
 # - task: AzureFileCopy@4

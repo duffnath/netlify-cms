@@ -13,10 +13,6 @@ steps:
   displayName: 'Install App'
   workingDirectory: 'website'
 
-- script: yarn install    
-  displayName: 'PreBuild'
-  workingDirectory: 'website'
-
 - script: yarn build
   displayName: 'Build'
   workingDirectory: 'website'

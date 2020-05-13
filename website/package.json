@@ -4,9 +4,7 @@
   "description": "Netlify CMS documentation website built with Gatsby",
   "scripts": {
     "start": "gatsby develop",
-    "build": "gatsby build && mv public dist",
-    "copy:contribs": "cp ../.all-contributorsrc data/contributors.json",
-    "prepare": "npm run copy:contribs",
+    "build": "gatsby build",
     "reset": "rm -rf .cache"
   },
   "author": "",

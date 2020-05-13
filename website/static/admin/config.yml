@@ -1,12 +1,14 @@
 backend:
   name: github
-  repo: netlify/netlify-cms
+  repo: duffnath/netlify-cms
   squash_merges: true
   open_authoring: true
+  site_domain: mwkscmsstore.z14.web.core.windows.net
+  base_url: https://api.netlify.com
 
-local_backend: true
+local_backend: false
 
-site_url: https://www.netlifycms.org
+site_url: https://mwkscmsstore.z14.web.core.windows.net
 
 publish_mode: editorial_workflow
 

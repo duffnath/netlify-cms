@@ -5,7 +5,8 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: DIR    
+- script: CD '$ENV:Agent_BuildDirectory'    
+    DIR
     CD 'website'
     npm i yarn -g
     yarn install

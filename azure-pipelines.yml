@@ -5,7 +5,8 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: CD '$(Build.SourcesDirectory)/website'
+- script: CD '$ENV:Build_SourcesDirectory'
+    CD 'website'
     npm i yarn -g
     yarn install
     yarn build

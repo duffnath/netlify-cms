@@ -6,7 +6,7 @@ pool:
 
 steps:
 - script: npm i yarn -g;
-    npm i -g gatsby-cli;
+    npm i gatsby-cli -g;
     yarn install
   displayName: 'Install'
   workingDirectory: 'website'

@@ -9,3 +9,5 @@ date: 2020-05-13T21:47:52.682Z
 # Title
 
 NewPost Blog Body
+
+![](../../../img/gatsby.svg)

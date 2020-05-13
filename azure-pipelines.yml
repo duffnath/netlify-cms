@@ -15,11 +15,6 @@ steps:
   displayName: 'Build'
   workingDirectory: 'website'
 
-- script: dir
-    yarn build
-  displayName: 'Build'
-  workingDirectory: 'website'
-
 - script: (dir -Directory).FullName
   displayName: 'Test'
   workingDirectory: 'website'

@@ -4,14 +4,18 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
-steps:
-- script: npm i yarn -g;        
-  displayName: 'Install Yarn'
-  workingDirectory: 'website'
+variables:
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
-- script: yarn install    
-  displayName: 'Install App'
-  workingDirectory: 'website'
+steps:
+- task: Cache@2
+  inputs:
+    key: 'yarn | "$(Agent.OS)" | yarn.lock'
+    restoreKeys: |
+       yarn | "$(Agent.OS)"
+       yarn
+    path: $(YARN_CACHE_FOLDER)
+  displayName: Cache Yarn packages
 
 - script: yarn build
   displayName: 'Build'

@@ -7,15 +7,17 @@ pool:
 steps:
 - script: npm i yarn -g;    
     yarn install
+    Write-Host 'Install complete'
   displayName: 'Install'
   workingDirectory: 'website'
 
 - script: npm i gatsby-cli -g;
     yarn build
+    Write-Host 'Build complete'
   displayName: 'Build'
   workingDirectory: 'website'
 
-- script: (dir -Directory).FullName
+- script: (dir . -Directory).FullName
   displayName: 'Test'
   workingDirectory: 'website'
 

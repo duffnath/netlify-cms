@@ -14,7 +14,7 @@ steps:
   displayName: 'Build'
   workingDirectory: 'website'
 
-- script: yarn build
+- script: gatsby build
   displayName: 'Build2'
   workingDirectory: 'website'
 

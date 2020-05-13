@@ -7,7 +7,10 @@ pool:
 steps:
 - script: npm i yarn -g
     yarn install
-    yarn build
+  displayName: 'Install'
+  workingDirectory: 'website'
+
+- script: yarn build
   displayName: 'Build'
   workingDirectory: 'website'
 

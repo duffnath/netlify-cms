@@ -15,7 +15,7 @@ const EditLink = ({ collection, filename }) => (
       }
     `}
   >
-    <a href={`/admin/#/edit/${collection}/${filename}`} target="_blank" rel="noopener noreferrer">
+    <a href={`https://duffblogstore.z14.web.core.windows.net/admin/#/edit/${collection}/${filename}`} target="_blank" rel="noopener noreferrer">
       <svg
         version="1.1"
         id="pencil"

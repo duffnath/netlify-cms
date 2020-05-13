@@ -3,12 +3,12 @@ backend:
   repo: duffnath/netlify-cms
   squash_merges: true
   open_authoring: true
-  site_domain: mwkscmsstore.z14.web.core.windows.net
+  site_domain: duffblogstore.z14.web.core.windows.net
   base_url: https://api.netlify.com
 
 local_backend: false
 
-site_url: https://mwkscmsstore.z14.web.core.windows.net
+site_url: https://blog.nateduff.com
 
 publish_mode: editorial_workflow
 

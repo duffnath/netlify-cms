@@ -13,8 +13,8 @@ class HTML extends React.Component {
           <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
           <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
           <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#96cf05" />
-          <meta name="apple-mobile-web-app-title" content="NetlifyCMS" />
-          <meta name="application-name" content="NetlifyCMS" />
+          <meta name="apple-mobile-web-app-title" content="DuffBlog" />
+          <meta name="application-name" content="DuffBlog" />
           {this.props.headComponents}
           <link
             rel="stylesheet"

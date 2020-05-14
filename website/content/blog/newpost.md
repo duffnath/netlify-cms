@@ -1,5 +1,5 @@
 ---
-title: NewBlogPost
+title: BlogPost
 author: NateDuff
 description: NewPost Blog Description
 meta_description: NewPost Blog Description Meta

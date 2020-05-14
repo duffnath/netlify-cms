@@ -1,6 +1,6 @@
 ---
 title: BlogPost
-author: NateDuff
+author: NateDuff.com
 description: NewPost Blog Description
 meta_description: NewPost Blog Description Meta
 twitter_image: img/preact.svg
